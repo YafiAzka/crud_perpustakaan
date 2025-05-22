@@ -7,25 +7,100 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p> -->
 
-<a href="asset/books.png"></a>
-<a href="asset/categories.png.png"></a>
-<a href="asset/publisher.png.png"></a>
+# Library Management System
 
-## About Laravel
+Aplikasi manajemen perpustakaan berbasis web yang dibangun menggunakan framework Laravel.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Fitur
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Manajemen Buku
+- Manajemen Kategori
+- Manajemen Penerbit
+- Autentikasi Pengguna
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Screenshot
 
-## Data Tables Implementation
+### Halaman Buku
+
+![Books Management](asset/books.png)
+
+### Halaman Kategori
+
+![Categories Management](asset/categories.png)
+
+### Halaman Penerbit
+
+![Publishers Management](asset/publisher.png)
+
+## Teknologi yang Digunakan
+
+- PHP 8.1
+- Laravel 10
+- MySQL
+- Bootstrap 5
+- DataTables
+- jQuery
+
+## Instalasi
+
+1. Clone repository
+
+```bash
+git clone https://github.com/username/perpustakaan.git
+cd perpustakaan
+```
+
+2. Install dependencies
+
+```bash
+composer install
+```
+
+3. Copy file .env
+
+```bash
+cp .env.example .env
+```
+
+4. Generate application key
+
+```bash
+php artisan key:generate
+```
+
+5. Konfigurasi database di file .env
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=perpustakaan
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+6. Jalankan migrasi dan seeder
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+7. Jalankan server development
+
+```bash
+php artisan serve
+```
+
+## Akses Aplikasi
+
+Buka browser dan akses http://localhost:8000
+
+### Login Default
+
+- Username: admin
+- Password: admin123
+
+## Implementasi Data Tables
 
 Dalam implementasi data tables pada framework Laravel, berikut adalah langkah-langkah yang dilakukan:
 
@@ -64,11 +139,23 @@ Dalam implementasi data tables pada framework Laravel, berikut adalah langkah-la
    - Implementasikan pagination
    - Tambahkan fitur pencarian dan filter
 
-Contoh implementasi dapat dilihat pada:
+## Lisensi
 
-- Categories: `/categories`
-- Publishers: `/publishers`
-- Books: `/books`
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
+
+## About Laravel
+
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
 ## Learning Laravel
 
